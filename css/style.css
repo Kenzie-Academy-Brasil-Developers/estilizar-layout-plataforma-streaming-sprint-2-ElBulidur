@@ -14,6 +14,12 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 **** PÁGINA INICIAL
 */
 
+body, header, figure,img, figcaption, div, section, h2, h3, ul, footer{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
 /* VARIÁVEIS */
 :root{
   
@@ -21,18 +27,91 @@ SUGESTÃO DE ESTRUTURAÇÃO BASE
 
 /*BODY*/
 	body{
-
+		background-color: #00002E;
+		font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
 	}
 
 /*TOPO*/
 	header.topo{
-		
+		width: 100%;
+		height: 20vh;
 	}
-
-/*RODAPÉ*/
-	
+	.topo__logo{
+		width: 200px;
+	}
+	.topo__caption-logo{
+		display: none;
+	}
 
 /*PÁGINA INICIAL*/
 	div.pg-home{
-		
+		width: 100%;
+		height: 80vh;
 	}
+	.pg-home__secao{
+		width: 100%;
+		height: 60vh;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.pg-home__titulo-da-secao{
+		font-size: 3em;
+		color:white;
+		margin: 20px 0px;
+	}
+
+	.pg-home__lista-usuario{
+		display: flex;
+		flex-direction: row;
+		width: 856px;
+		align-items: center;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+	}
+	
+	.lista-usuario__usuario{
+		flex-direction: column;
+		align-items: center;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: auto;
+		text-align: center;
+		padding: 10px;
+		box-sizing: border-box;
+		list-style: none;
+		color: white;
+	}
+
+	.lista-usuario__addPerfil{
+		width: 186px;
+		flex-direction: column;
+		align-items: center;
+		flex-grow: 1;
+		flex-shrink: 1;
+		flex-basis: 186px;
+		text-align: center;
+		padding: 10px;
+		box-sizing: border-box;
+		list-style: none;
+		color: white;}
+
+	.lista-usuario__avatar-do-usuario{
+		width: 100%;
+	}
+
+	.lista-usuario__caption-do-avatar{}
+
+	.lista-usuario__nome-usuario{}
+
+/*RODAPÉ*/
+		
+	.footer{
+		width: 100%;
+		height: 23vh;
+		display: flex;
+		align-items: center;
+	}
+	.footer__botao{}
