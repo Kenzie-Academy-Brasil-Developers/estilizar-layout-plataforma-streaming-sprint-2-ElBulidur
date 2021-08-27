@@ -22,7 +22,9 @@ body, header, figure,img, figcaption, div, section, h2, h3, ul, footer{
 
 /* VARIÁVEIS */
 :root{
-  
+	--width-for-content-mob: 429px;
+	--width-for-content-desk: 858px;
+  	--width-for-items: 186px;
 }
 
 /*BODY*/
@@ -45,136 +47,69 @@ body, header, figure,img, figcaption, div, section, h2, h3, ul, footer{
 
 
 /*PÁGINA INICIAL*/
-	div.pg-home{
-	}
 	.pg-home__secao{
+		text-align: center;
+		color: white;
 	}
 
 	.pg-home__titulo-da-secao{
+		font-size: 2em;
+		display: inline-block;
+		margin: 7vh 0px;
+		width: 100%;
 	}
 
 	.pg-home__lista-usuario{
-	}
-	
-	.lista-usuario__usuario{
+		list-style: none;
+		max-width: var(--width-for-content-mob);
+		display: flex;
+		flex-flow: row wrap;
+		align-items: center;
+		justify-content: space-around;
+		margin: 20px auto;
 	}
 
-	.lista-usuario__addPerfil{
+	.lista-usuario__usuario{
+		width: var(--width-for-items);
+		
 	}
 
 	.lista-usuario__avatar-do-usuario{
-	}
-
-	.lista-usuario__caption-do-avatar{}
-
-	.lista-usuario__nome-usuario{}
-
-/*RODAPÉ*/
-		
-	.footer{
 		width: 100%;
-		height: 23vh;
 	}
-	.footer__botao{}
+
+	.lista-usuario__avatar-do-usuario:active{
+		border: 3px solid white;
+	}
+
+	.lista-usuario__caption-do-avatar{
+		display: none;
+	}
+
+	.lista-usuario__nome-usuario{
+		margin: 1em;
+	}
 
 		
-	@media (min-width: 1000px) {
-		
-		/* VARIÁVEIS */
-		:root{
-		  
-		}
-		
-		/*BODY*/
-			body{
-				background-color: #00002E;
-				font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-			}
-		
-		/*TOPO*/
-			header.topo{
-				width: 100%;
-				height: 20vh;
-			}
-			.topo__logo{
-				width: 200px;
-			}
-			.topo__caption-logo{
-				display: none;
-			}
-		
-		
-		/*PÁGINA INICIAL*/
-			div.pg-home{
-				width: 100%;
-				height: 80vh;
-			}
-			.pg-home__secao{
-				width: 100%;
-				height: 60vh;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-			}
-		
+	@media (min-width: 1200px) {
 			.pg-home__titulo-da-secao{
 				font-size: 3em;
-				color:white;
-				margin: 20px 0px;
 			}
-		
+
 			.pg-home__lista-usuario{
-				display: flex;
-				flex-direction: row;
-				width: 856px;
-				align-items: center;
-				flex-grow: 1;
-				flex-shrink: 1;
-				flex-basis: auto;
-			}
+				max-width: var(--width-for-content-desk);
+			}	
+	}
+
+	/*RODAPÉ*/
 			
-			.lista-usuario__usuario{
-				flex-direction: column;
-				align-items: center;
-				flex-grow: 1;
-				flex-shrink: 1;
-				flex-basis: auto;
-				text-align: center;
-				padding: 10px;
-				box-sizing: border-box;
-				list-style: none;
-				color: white;
-			}
-		
-			.lista-usuario__addPerfil{
-				width: 186px;
-				flex-direction: column;
-				align-items: center;
-				flex-grow: 1;
-				flex-shrink: 1;
-				flex-basis: 186px;
-				text-align: center;
-				padding: 10px;
-				box-sizing: border-box;
-				list-style: none;
-				color: white;}
-		
-			.lista-usuario__avatar-do-usuario{
-				width: 100%;
-			}
-		
-			.lista-usuario__caption-do-avatar{}
-		
-			.lista-usuario__nome-usuario{}
-		
-		/*RODAPÉ*/
-				
-			.footer{
-				width: 100%;
-				height: 23vh;
-				display: flex;
-				align-items: center;
-			}
-			.footer__botao{}
-		
+	.footer{
+		padding: 8vh 0px;
+	}
+	.footer__botao{
+		padding: 1em 3em;
+		font-size: 1.5em;
+		color: white;
+		background: none;
+		border: 0.1em solid white;
 	}
